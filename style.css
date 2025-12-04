@@ -48,7 +48,7 @@ h1, h2, h3 {
     position:fixed;
     top:0; width:100%;
     background:rgba(245,248,246,0.95);
-    padding:15px 30px;
+    padding:5px 30px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -57,9 +57,17 @@ h1, h2, h3 {
 }
 
 .header .logo {
-    font-weight:700;
-    font-size:1.5rem;
-    color:#1f5a4d;
+    padding:0;
+    border:none;
+    background:none;
+    border-radius:0;
+    backdrop-filter:none;
+}
+
+.header .logo img {
+    height:67px;   /* можешь менять размер */
+    width:auto;
+    display:block;
 }
 
 .header nav a {
@@ -86,7 +94,7 @@ h1, h2, h3 {
 }
 
 .hero h1 {
-    font-size:3rem;
+    font-size:2.6rem;
     color:#f1f9f7;
     background:rgba(31,90,77,0.9);
     padding:8px 15px;
