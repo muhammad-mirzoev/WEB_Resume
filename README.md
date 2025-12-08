@@ -1,1 +1,1 @@
-# [WEB-Portfolio](https://muhammad-mirzoev.github.io/WEB-Portfolio)
+# [WEB-Resume](https://muhammad-mirzoev.github.io/WEB_Resume/)
