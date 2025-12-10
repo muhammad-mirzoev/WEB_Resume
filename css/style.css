@@ -30,10 +30,11 @@ a {
 .btn {
     display: inline-block;
     padding: 12px 30px;
-    border-radius: 5px;
+    border-radius: 16px;
     font-weight: bold;
     transition: background-color 0.3s;
     text-align: center;
+    margin-top: 35px;
 }
 
 .primary-btn {
@@ -93,10 +94,77 @@ a {
     background: none;
     border: 1px solid var(--secondary-text-color);
     color: var(--text-color);
-    padding: 8px 15px;
+    padding: 6px 10px;
     font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+
+.quick-links-panel {
+    /* Расположение элементов по центру в строку */
+    display: flex;
+    justify-content: flex-start; /* Центрирование по горизонтали */
+    margin-left: 110px;
+    gap: 30px; /* Расстояние между иконками */
+    margin-top: 40px; /* Отступ сверху, чтобы оторвать от верхнего контента */
+    padding: 20px 0; /* Внутренние отступы сверху/снизу */
+}
+
+.link-item {
+    /* Настройки самих ссылок (круги с иконками) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 55px;
+    height: 55px;
+
+    position: relative;
+    
+    background-color: #333; /* Темный фон иконки */
+    color: white; /* Цвет иконки */
+    border-radius: 50%; /* Делаем круг */
+    text-decoration: none; /* Убираем подчеркивание */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Небольшая тень */
+    
+    transition: all 0.3s ease; /* Плавный переход для эффектов */
+}
+
+
+.link-item::before {
+    content: '';
+    position: absolute;
+    /* Размеры и расположение для линии: */
+    width: 0; /* Изначально линия невидима (нулевая ширина) */
+    height: 3px; /* Толщина нити */
+    background-color: #FFC72C; /* Желтый цвет */
+    
+    top: 60px; /* Позиция выше иконки, чтобы "тянуться" к верхней кнопке */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translateX(-50%); /* Точное центрирование */
+    
+    transition: width 0.3s ease-out, background-color 0.3s ease-out; /* Анимация */
+    z-index: -1; /* Чтобы линия была под кнопками, если они накладываются */
+}
+
+
+.link-item i {
+    /* Размер иконки */
+    font-size: 27px;
+}
+
+/* Эффект при наведении */
+.link-item:hover {
+    background-color: #fddb3a; /* Желтый цвет при наведении (как на вашем сайте) */
+    color: #1a1a1a; /* Темный цвет иконки при наведении */
+    transform: translateY(-5px) scale(1.05); /* Небольшой подъем и увеличение */
+    box-shadow: 0 8px 15px rgba(255, 199, 44, 0.4); /* Яркая тень */
+}
+
+.link-item:hover::before {
+    width: 60px; /* <--- Установите желаемую длину нити */
+    /* Длина должна быть достаточной, чтобы дотянуться до области между кнопками */
 }
 
 
@@ -133,12 +201,39 @@ a {
 .text-content h1 {
     font-size: 56px;
     margin-bottom: 20px;
+    
+   color: #ffffff; /* Запасной цвет для старых браузеров */
+    
+    /* 2. Создаем Градиент (длинный, чтобы обеспечить "пробег") */
+    /* Используем очень длинный градиент, который начинается и заканчивается белым, 
+       а в центре имеет наш желтый цвет. */
+    background: linear-gradient(
+        to right,
+        #ffffff 0%,     /* Начало: белый */
+        #FFC72C 50%,     /* Середина: желтый */
+        #ffffff 100%     /* Конец: белый */
+    );
+    
+    /* 3. Применяем Градиент в качестве цвета текста */
+    -webkit-background-clip: text; /* Для Chrome/Safari */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Делает сам текст прозрачным, 
+                                            показывая градиент через него */
+    
+    /* 4. Настройка анимации (движение градиента) */
+    background-size: 200% 100%; /* Удвоенный размер, чтобы можно было его сдвигать */
+    transition: background-position 0.5s ease-in-out; /* Анимируем позицию градиента */
 }
 
 .text-content p:nth-of-type(2) {
     font-size: 18px;
     margin-bottom: 40px;
     color: var(--secondary-text-color);
+}
+
+.text-content h1:hover {
+    color: #fddb3a; /* Желтый цвет */
+    background-position: -100% 0;
 }
 
 .actions {
@@ -395,17 +490,17 @@ a {
 
 .about-image {
     flex: 1;
-    max-width: 400px;
-    padding: 20px;
+    max-width: 370px;
+    padding: 15px;
     background: var(--card-dark-bg);
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 .about-image img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
+    border-radius: 25px;
 }
 
 .about-text {
