@@ -1,1 +1,1 @@
-# [WEB-Resume](https://muhammad-mirzoev.github.io/WEB_Resume/)
+# [Перейти/Go-to](https://muhammad-mirzoev.github.io/WEB_Resume/)
