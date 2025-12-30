@@ -50,7 +50,7 @@ a {
     background: none;
     border: 1px solid var(--primary-color);
     color: var(--text-color);
-    margin-left: 10px;
+    margin-left: 23px;
 }
 
 .secondary-btn:hover {
