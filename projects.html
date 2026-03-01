@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Шумстер</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">M<span>/</span>Ш</div>
+        <nav class="navbar">
+            <a href="index.html">Главное</a>
+            <a href="about.html">Обо мне</a>
+            <a href="projects.html" class="active">Проекты</a>
+            <a href="services.html">Навыки</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+        <button class="menu-btn">☰</button>
+    </header>
+
+    <section class="projects-hero">
+        <div class="container">
+            <div class="hero-intro">
+                <h1 class="glitch-text">ПРОЕКТЫ</h1>
+                <p>Выбранные репозитории и технические решения</p>
+            </div>
+
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-badge">In Development</div>
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-microphone-alt"></i></div>
+                        <h3>CACTUS - Voice Assistant</h3>
+                        <p>Кактус — персональный голосовой ассистент на Python. Позволяет управлять компьютером через голос</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/muhammad-mirzoev/cactus-0.0.1" class="github-link"><i class="fab fa-github"></i> Перейти</a>
+                            <span class="stars"><i class="fas fa-star"></i> 10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-badge highlight">Finished</div>
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <h3>SHOM•AIR</h3>
+                        <p>SHOM•AIR — интернет-магазин кроссовок, разработанный на Django. Проект готов для полноценной работы</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/muhammad-mirzoev/shom-air" class="github-link"><i class="fab fa-github"></i> Перейти</a>
+                            <span class="stars"><i class="fas fa-star"></i> 7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card active-border">
+                    <div class="project-badge highlight">Finished</div>
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>CURRENCY.SHOM</h3>
+                        <p>Currency Insight - современное Django-приложение для отслеживания курсов валют в реальном времени</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>Redis</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/muhammad-mirzoev/currency-shum" class="github-link"><i class="fab fa-github"></i> Перейти</a>
+                            <span class="stars"><i class="fas fa-star"></i> 3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card active-border">
+                    <div class="project-badge highlight">new</div>
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-expand"></i></div>
+                        <h3>Scaner for camera</h3>
+                        <p>Простой Python-проект для детекции людей через камеру. Приложение открывает камеру, находит людей, обводит их рамкой.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Ultralytics</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/muhammad-mirzoev/scaner-for_camera" class="github-link"><i class="fab fa-github"></i> Перейти</a>
+                            <span class="stars"><i class="fas fa-star"></i> 5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terminal-footer">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">system_log — bash</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="log-line"><span class="cmd-prefix">user@shumster:~$</span> fetch-github-activity --latest</p>
+                    <p class="log-output">> Состояние: Поиск новых идей и оптимизация существующих решений...</p>
+                    <p class="log-output">> Локация: <span class="highlight-text">github.com/muhammad-mirzoev</span></p>
+                    <div class="terminal-actions">
+                        <p class="log-line animate-pulse">_ Ожидание команды...</p>
+                        <a href="https://github.com/muhammad-mirzoev" target="_blank" class="terminal-btn">Открыть GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
